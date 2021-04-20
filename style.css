@@ -1,0 +1,105 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Roboto;
+  overflow: hidden;
+}
+
+.header {
+  border-bottom: 1px solid rgba(209, 211, 214, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 20px;
+}
+
+.header h1 {
+  font-weight: 300;
+}
+
+.header .surname {
+  color: rgb(100, 160, 255);
+}
+
+.header ul {
+  list-style: none;
+  display: inline;
+}
+
+.header li {
+  display: inline;
+  padding-right: 5px;
+}
+
+.sidebar {
+  background-color:rgba(209, 211, 214, 0.5);
+  height: calc(100vh - 100px);
+  width: 200px;
+  position: relative;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transform: translate(-100%);
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 40px 15px;
+}
+
+.sidebar li {
+  padding: 10px 0px;
+}
+
+@keyframes mouseover-padding {
+  from { padding-left: 0px; }
+  to { padding-left: 20px; }
+}
+
+@keyframes mouseout-padding {
+  from { padding-left: 20px; }
+  to { padding-left: 0px; }
+}
+
+.sidebar li:hover {
+  animation: mouseover-padding 0.5s, mouseover-backgroundColor 0.5s;
+  padding-left: 20px;
+}
+
+.sidebar li:not( :hover){
+  animation: mouseout-padding 0.5s;
+}
+
+.sidebar button {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  padding: 1px;
+  height: 20px;
+  width: 20px;
+}
+
+@keyframes show-sidebar {
+  from { transform: translate(-100%); }
+  to { transform: translate(0); }
+}
+
+@keyframes hide-sidebar {
+  from { transform: translate(0); }
+  to { transform: translate(-100%); }
+}
+
+.show-sidebar {
+  /* animation: show-sidebar 2s;  */
+  transform: translate(0);
+}
+
+.show-sidebar-transition {
+  transition: 2s;
+  margin-left: 200px;
+}
+
