@@ -36,6 +36,11 @@ body {
   padding-right: 5px;
 }
 
+.sidebar-icon {
+  border: none;
+
+}
+
 .sidebar {
   background-color:rgba(209, 211, 214, 0.5);
   height: calc(100vh - 100px);
@@ -81,9 +86,10 @@ body {
   padding: 1px;
   height: 20px;
   width: 20px;
+  border: none;
 }
 
-@keyframes show-sidebar {
+/* @keyframes show-sidebar {
   from { transform: translate(-100%); }
   to { transform: translate(0); }
 }
@@ -94,12 +100,15 @@ body {
 }
 
 .show-sidebar {
-  /* animation: show-sidebar 2s;  */
   transform: translate(0);
-}
+} */
 
 .show-sidebar-transition {
-  transition: 2s;
+  transition: 1s;
   margin-left: 200px;
 }
 
+.hide-sidebar-transition {
+  transition: 1s;
+  margin-left: 0px;
+}
